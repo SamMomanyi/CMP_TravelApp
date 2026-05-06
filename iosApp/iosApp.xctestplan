@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "F0A05DF0-C78E-4B33-8F50-0CAC54F51B03",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iosApp.xcodeproj",
+      "identifier" : "7A307179B15D3376A0D6D9EF",
+      "name" : "iosApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "selectedTags" : {
+        "includeXCTests" : true
+      },
+      "target" : {
+        "containerPath" : "container:iosApp.xcodeproj",
+        "identifier" : "D104032C2F5C8B9A009799A8",
+        "name" : "iosAppUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "selectedTags" : {
+        "includeXCTests" : true
+      },
+      "target" : {
+        "containerPath" : "container:iosApp.xcodeproj",
+        "identifier" : "D159609C2F5DEAAF009BB7D5",
+        "name" : "TravenorCMPUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
