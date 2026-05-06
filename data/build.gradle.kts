@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidKotlinMultiplatformLibrary)
@@ -13,7 +11,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     androidLibrary {
-        namespace = "com.codewithfk.data"
+        namespace = "com.sammomanyi.data"
         compileSdk = 36
         minSdk = 24
 
@@ -35,10 +33,6 @@ kotlin {
             baseName = "data"
             isStatic = true
         }
-    }
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
     }
     sourceSets {
         commonMain {

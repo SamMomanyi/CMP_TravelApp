@@ -1,0 +1,58 @@
+package com.sammomanyi.presentation.feature.register
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.sammomanyi.domain.usecase.SignInUseCase
+import com.sammomanyi.presentation.feature.register.AuthNavigation
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+
+class SignInViewModel(private val loginUseCase: SignInUseCase) : ViewModel() {
+    private val _navigationState = MutableSharedFlow<AuthNavigation>()
+    val navigationState = _navigationState.asSharedFlow()
+
+    private val _uiState = MutableStateFlow(SignInUiState())
+    val uiState = _uiState.asStateFlow()
+
+    private val _email = MutableStateFlow("")
+    val email = _email.asStateFlow()
+
+    private val _password = MutableStateFlow("")
+    val password = _password.asStateFlow()
+
+    fun onEmailChange(newEmail: String) {
+        _email.value = newEmail
+    }
+
+    fun onPasswordChange(newPassword: String) {
+        _password.value = newPassword
+    }
+
+    fun signIn() {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, errorMessage = null)
+            val result = loginUseCase.execute(_email.value, _password.value)
+            result.onSuccess { user ->
+                _uiState.value = _uiState.value.copy(user = user, isLoading = false)
+                _navigationState.emit(AuthNavigation.ToListing)
+            }.onFailure { error ->
+                _uiState.value =
+                    _uiState.value.copy(errorMessage = error.message, isLoading = false)
+            }
+        }
+    }
+
+    fun onSignUpClick() {
+        viewModelScope.launch {
+            _navigationState.emit(AuthNavigation.ToSignUp)
+        }
+    }
+
+    fun removeErrorMessage() {
+        _uiState.value = _uiState.value.copy(errorMessage = null)
+    }
+
+}

@@ -16,7 +16,7 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     androidLibrary {
-        namespace = "com.codewithfk.travenor.shared"
+        namespace = "com.sammomanyi.shared"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
 
         compilerOptions {
@@ -41,16 +41,16 @@ kotlin {
             isStatic = true
         }
     }
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        outputModuleName = "composeApp"
-        browser {
-            commonWebpackConfig {
-                outputFileName = "composeApp.js"
-            }
-        }
-        binaries.executable()
-    }
+//    @OptIn(ExperimentalWasmDsl::class)
+//    wasmJs {
+//        outputModuleName = "composeApp"
+//        browser {
+//            commonWebpackConfig {
+//                outputFileName = "composeApp.js"
+//            }
+//        }
+//        binaries.executable()
+//    }
 
     sourceSets {
 
@@ -122,9 +122,9 @@ kotlin {
             }
         }
 
-        wasmJsMain.dependencies {
-            implementation(libs.ktor.client.js)
-        }
+//        wasmJsMain.dependencies {
+//            implementation(libs.ktor.client.js)
+//        }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
         }

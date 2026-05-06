@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.codewithfk.travenor"
+    namespace = "com.sammomanyi"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.codewithfk.travenor"
+        applicationId = "com.sammomanyi"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1

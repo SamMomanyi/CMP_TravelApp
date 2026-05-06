@@ -21,9 +21,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		43F29545571815FC26F87D6F /* TravenorCMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravenorCMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F29545571815FC26F87D6F /* Sammomanyi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sammomanyi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15960982F5DE98C009BB7D5 /* iosApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iosApp.xctestplan; sourceTree = "<group>"; };
-		D159609D2F5DEAAF009BB7D5 /* TravenorCMPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravenorCMPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D159609D2F5DEAAF009BB7D5 /* SammomanyiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SammomanyiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,9 +50,9 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		D159609E2F5DEAAF009BB7D5 /* TravenorCMPUITests */ = {
+		D159609E2F5DEAAF009BB7D5 /* SammomanyiUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TravenorCMPUITests;
+			path = SammomanyiUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,7 +82,7 @@
 				D15960982F5DE98C009BB7D5 /* iosApp.xctestplan */,
 				9E09640A8FCD7D6A37156E97 /* Configuration */,
 				420973D2C046602D9A345127 /* iosApp */,
-				D159609E2F5DEAAF009BB7D5 /* TravenorCMPUITests */,
+				D159609E2F5DEAAF009BB7D5 /* SammomanyiUITests */,
 				E93AB1CB9DF5EF8FE634C0E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +90,8 @@
 		E93AB1CB9DF5EF8FE634C0E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43F29545571815FC26F87D6F /* TravenorCMP.app */,
-				D159609D2F5DEAAF009BB7D5 /* TravenorCMPUITests.xctest */,
+				43F29545571815FC26F87D6F /* Sammomanyi.app */,
+				D159609D2F5DEAAF009BB7D5 /* SammomanyiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,12 +120,12 @@
 				D10032DF2F40855E00A97138 /* StripePaymentSheet */,
 			);
 			productName = iosApp;
-			productReference = 43F29545571815FC26F87D6F /* TravenorCMP.app */;
+			productReference = 43F29545571815FC26F87D6F /* Sammomanyi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D159609C2F5DEAAF009BB7D5 /* TravenorCMPUITests */ = {
+		D159609C2F5DEAAF009BB7D5 /* SammomanyiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D15960A52F5DEAAF009BB7D5 /* Build configuration list for PBXNativeTarget "TravenorCMPUITests" */;
+			buildConfigurationList = D15960A52F5DEAAF009BB7D5 /* Build configuration list for PBXNativeTarget "SammomanyiUITests" */;
 			buildPhases = (
 				D15960992F5DEAAF009BB7D5 /* Sources */,
 				D159609A2F5DEAAF009BB7D5 /* Frameworks */,
@@ -137,13 +137,13 @@
 				D15960A42F5DEAAF009BB7D5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				D159609E2F5DEAAF009BB7D5 /* TravenorCMPUITests */,
+				D159609E2F5DEAAF009BB7D5 /* SammomanyiUITests */,
 			);
-			name = TravenorCMPUITests;
+			name = SammomanyiUITests;
 			packageProductDependencies = (
 			);
-			productName = TravenorCMPUITests;
-			productReference = D159609D2F5DEAAF009BB7D5 /* TravenorCMPUITests.xctest */;
+			productName = SammomanyiUITests;
+			productReference = D159609D2F5DEAAF009BB7D5 /* SammomanyiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +183,7 @@
 			projectRoot = "";
 			targets = (
 				7A307179B15D3376A0D6D9EF /* iosApp */,
-				D159609C2F5DEAAF009BB7D5 /* TravenorCMPUITests */,
+				D159609C2F5DEAAF009BB7D5 /* SammomanyiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,7 +375,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codewithfk.travenor.TravenorCMPUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammomanyi.SammomanyiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -392,7 +392,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codewithfk.travenor.TravenorCMPUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammomanyi.SammomanyiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -487,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D15960A52F5DEAAF009BB7D5 /* Build configuration list for PBXNativeTarget "TravenorCMPUITests" */ = {
+		D15960A52F5DEAAF009BB7D5 /* Build configuration list for PBXNativeTarget "SammomanyiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D15960A62F5DEAAF009BB7D5 /* Debug */,

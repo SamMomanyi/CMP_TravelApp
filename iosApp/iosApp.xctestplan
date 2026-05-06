@@ -35,7 +35,7 @@
       "target" : {
         "containerPath" : "container:iosApp.xcodeproj",
         "identifier" : "D159609C2F5DEAAF009BB7D5",
-        "name" : "TravenorCMPUITests"
+        "name" : "SammomanyiUITests"
       }
     }
   ],

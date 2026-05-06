@@ -1,4 +1,4 @@
-rootProject.name = "TravenorCMP"
+rootProject.name = "Sammomanyi"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

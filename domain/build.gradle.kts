@@ -1,6 +1,3 @@
-
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidKotlinMultiplatformLibrary)
@@ -10,7 +7,7 @@ plugins {
 kotlin {
 
     androidLibrary {
-        namespace = "com.codewithfk.domain"
+        namespace = "com.sammomanyi.domain"
         compileSdk = 36
         minSdk = 24
 
@@ -36,10 +33,6 @@ kotlin {
         }
     }
 
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-    }
     sourceSets {
         commonMain {
             dependencies {
