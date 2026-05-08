@@ -4,6 +4,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import com.sammomanyi.cache.createDataStore
 import com.sammomanyi.cache.dataStoreFileName
+import com.sammomanyi.data.datasource.BackendConfig
 import kotlinx.cinterop.ExperimentalForeignApi
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -12,7 +13,7 @@ import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 
 actual fun platformModule(): Module = module {
-    single<String> { "http://localhost:8080" }
+    single<BackendConfig> { BackendConfig.custom("http://localhost:8080") }
 
     single <DataStore<Preferences>>{
         createDataStore(producerPath = { "${getDocumentPath()}/${dataStoreFileName}" })

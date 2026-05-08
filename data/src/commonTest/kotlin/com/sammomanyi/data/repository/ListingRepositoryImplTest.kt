@@ -1,6 +1,7 @@
 package com.sammomanyi.data.repository
 
 import com.sammomanyi.data.datasource.CacheDataSource
+import com.sammomanyi.data.datasource.BackendConfig
 import com.sammomanyi.data.datasource.RemoteDataSource
 import com.sammomanyi.data.fake.FakeCacheDataSource
 import com.sammomanyi.data.jsonResponse
@@ -63,7 +64,7 @@ class ListingRepositoryImplTest : KoinTest {
             }
         }
         single<CacheDataSource> { FakeCacheDataSource() }
-        single { "http://localhost:8080" }
+        single { BackendConfig.custom("http://localhost:8080") }
         single { RemoteDataSource(get(), get(), get()) }
         single<ListingRepository> { ListingRepositoryImpl(get()) }
     }
