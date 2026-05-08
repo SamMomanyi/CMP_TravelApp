@@ -33,3 +33,9 @@ in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and r
 ---
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…# CMP_TravelApp
+
+## Backend
+
+This clone does not currently contain Firebase integration. The app is wired to a custom HTTP backend through the `data` module and now exposes a `BackendConfig` seam for moving to Supabase later.
+
+See [docs/backend-migration.md](./docs/backend-migration.md) for the current wiring points and the Supabase placeholder route mapping.
